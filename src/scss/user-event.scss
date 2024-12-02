@@ -1,0 +1,260 @@
+.label {
+	color: $darkColor;
+	font-size: toRem(18);
+	letter-spacing: 0.36px;
+	&:not(:last-child) {
+		margin-bottom: toRem(12);
+	}
+}
+
+.link {
+	color: $darkColor;
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}
+.error,
+.form__error {
+	margin-top: toRem(5);
+	color: #EE1D52;
+}
+
+.sign-in,
+.sign-up,
+.reset-pass,
+.check-page,
+.verification,
+.create-pass {
+	position: relative;
+	@media (min-width:$mobile){
+		max-width: toRem(1440);
+		margin: 0 auto;	  
+	}
+	// .sign-in__container
+	&__container {
+		@media (min-width:$mobile){
+			display: grid;
+			min-height: toRem(1000);
+			grid-template-columns: repeat(2, 1fr);
+			&::before{
+				content:'';
+			}  
+		}
+	}
+	// .sign-in__image
+	&__image {
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+		@media (min-width:$mobile){
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 50%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top;
+		}		
+	}
+	// .sign-in__body
+	&__body {
+		@include adaptiveValue("padding-left", 77, 0, 2);
+		@include adaptiveValue("padding-top", 60, 25);
+		@include adaptiveValue("padding-bottom", 202, 25);
+	}
+	// .sign-in__title
+	&__title {
+		@extend %CS;
+		color: #333333;
+		@include adaptiveValue("font-size", 34, 28);
+		font-weight: 700;
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	// .sign-in__links
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 25);
+		}
+	}
+
+	// .sign-in__link
+
+	&__link {		
+		/* text */
+		color: $purplColor;
+		@include adaptiveValue("font-size", 22, 16);
+		font-weight: 500;
+
+		/* Link style */
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		gap: toRem(12);
+		padding: toRem(16) toRem(20);
+		border-radius: toRem(8);
+		border: toRem(1) solid #3C4242;
+
+		transition: all 0.3s;
+
+		&:hover {
+			background-color: $purplColor;
+			color: $liteColor;
+		}
+	}
+
+	// .sign-in__line
+
+	&__divider {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		color: #666;
+		margin: toRem(20) 0;
+		&::before,&::after{
+			content:'';
+			flex: 1;
+			border-bottom: toRem(1) solid rgba(102, 102, 102, 0.25);
+			margin: 0 toRem(10);
+		}
+		span {
+			@extend %CS;
+			text-transform: uppercase;
+			white-space: nowrap;
+			font-size: toRem(18);
+		}
+	}
+	
+	.form-sign-in,
+	.form-sign-up,
+	.form-reset-pass,
+	.form-verification,
+	.form-create-pass {
+
+		// .form-sign-in__items
+	
+		&__items {
+			display: flex;
+			flex-direction: column;
+			@include adaptiveValue("gap", 30, 25);
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 30, 25);
+			}
+		}
+	
+		// .form-sign-in__item
+	
+		&__item {
+			display: flex;
+			flex-direction: column;
+		}
+		&__line {
+			position: relative;
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
+		// .form-sign-in__input
+	
+		&__input {
+			
+		}
+	
+		// form-sign-in__pass
+		&__viewpass {
+			position: absolute;
+			top: toRem(50);
+			right: toRem(20);
+			display: flex;
+			align-items: center;
+			gap: toRem(10);
+			transition: color 0.3s ease, transform 0.3s ease;
+			&:hover {
+				color: $darkColor;
+			}
+		}
+	
+		// .form-sign-in__label
+	
+		&__label {
+			display: flex;
+		}
+	
+		
+		// .form-sign-in__link
+	
+		&__link {
+			display: inline-flex;			
+			justify-content: end;
+		}
+
+		&__agree {
+			display: flex;
+			flex-direction: column;
+			gap: toRem(18);
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 60, 25);
+			}
+		}
+	}
+	
+	&__form {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+
+	// .sign-in__button
+
+	&__button {
+		min-width: toRem(167);
+	}
+
+	/* SIGN UP PAGE */
+
+	.sign-up__title,
+	.reset-pass__title,
+	.verification__title {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+
+	&__subtitle,
+	.reset-pass__subtitle,
+	.verification__subtitle {
+		color: rgba(102, 102, 102, 0.80);
+		font-weight: 500;
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+
+	/* Check Email */
+	.check-page__subtitle {
+		span {
+			color: $purplColor;
+			font-weight: 700;
+		}
+	}
+	.form-check-page__link {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		&::before {
+			font-size: toRem(14);
+		}
+		&:hover {
+			color: $purplColor;
+		}
+	}
+}
+
+

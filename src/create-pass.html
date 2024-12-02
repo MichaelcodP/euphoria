@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Create Page"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+                <section class="page__create-pass create-pass">					
+					<div class="create-pass__container">
+                        <img class="create-pass__image" src="img/sign/create.jpg" alt="Image">
+						<div class="create-pass__body">
+							<h1 class="create-pass__title">Create New Password</h1>
+							<label class="create-pass__subtitle">Your new password must be different from previous used passwords.</label>
+							<form action="#" class="create-pass__form form-create-pass" method="POST">
+								<div class="form-create-pass__items">
+									<div class="form-create-pass__item">
+										<div class="form-create-pass__line">
+											<label class="form-create-pass__label label" for="form[password]">Password</label>
+											<input data-required="password" autocomplete="off" type="password" name="form[password]" data-error="Введіть пароль" class="form-sign-up__input input">
+											<button type="button" class="form-create-pass__viewpass _icon-eye-hide"></button>
+										</div>
+										<span class="form-create-pass__span">Must be at least 8 characters.</span>
+									</div>
+									<div class="form-create-pass__item">
+										<label class="form-create-pass__label label" for="form[password]">Confirm Password</label>
+										<input data-required="password" autocomplete="off" type="password" name="form[password]" data-error="Новий пароль і пароль підтвердження не збігаються" class="form-create-pass__input input">
+									</div>
+								</div>
+								<button type="submit" class="create-pass__button button">Reset Password</button>								
+							</form>							
+						</div>
+					</div>
+				</section>
+            </main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

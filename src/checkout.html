@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Checkout Page"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+                <section class="page__checkout checkout">
+                    <div class="checkout__container">
+                        <div class="checkout__header">                            
+                            <ul class="checkout__breadcrumbs breadcrumbs">
+                                <li class="breadcrumbs__item _icon-ch-right">
+                                    <a href="index.html" class="breadcrumbs__link">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item _icon-ch-right">
+                                    <a href="account.html" class="breadcrumbs__link">My Account</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__current">Check Out</span>
+                                </li>
+                             </ul>                                                        
+                        </div>
+                        <div class="checkout__content">
+                            <div class="checkout__title title">
+                                <h2>Check Out</h2>
+                            </div>
+                            <div class="checkout__subtitle">
+                                <h3>Billing Details</h3>
+                            </div>
+                            <form action="#" method="POST" id="form-checkout" enctype="multipart/form-data" name="form-checkout"
+                                class="checkout__form form-checkout">
+                                <div class="form-checkout__body">
+                                    <div class="form-checkout__item">
+                                        <label class="form-checkout__label label" for="nameFirst">First Name*</label>
+                                        <input  name="nameFirst" id="nameFirst" type="text" required
+                                            placeholder="First Name" class="form-checkout__input input">
+                                    </div>
+                                    <div class="form-checkout__item">
+                                        <label class="form-checkout__label label" for="nameLast">Last Name*</label>
+                                        <input  name="nameLast" id="nameLast" type="text" required placeholder="Last Name"
+                                            class="form-checkout__input input">
+                                    </div>
+                                    <div class="form-checkout__item">
+                                        <label class="form-checkout__label label" for="regionCountry">Country / Region*</label>
+                                        <input  name="regionCountry" id="regionCountry" type="text" required
+                                            placeholder="Country / Region" class="form-checkout__input input">
+                                    </div>
+                                    <div class="form-checkout__item">
+                                        <label class="form-checkout__label label" for="nameCompany">Company Name</label>
+                                        <input  name="nameCompany" id="nameCompany" type="text"
+                                            placeholder="Company (optional)" class="form-checkout__input input">
+                                    </div>
+                                    <div class="form-checkout__item">
+                                        <label class="form-checkout__label label" for="addressStreet">Street Address*</label>
+                                        <input  name="addressStreet" id="addressStreet" type="text" required
+                                            placeholder="House number and street name" class="form-checkout__input input">
+                                    </div>
+                                    <div class="form-checkout__item">
+                                        <label class="form-checkout__label label" for="apt">Apt, suite, unit</label>
+                                        <input  name="apt" id="apt" type="text"
+                                            placeholder="apartment, suite, unit, etc. (optional)" class="form-checkout__input input">
+                                    </div>
+                                    <div class="form-checkout__important important-details">
+                                        <div class="important-details__item">
+                                            <label class="form-checkout__label label" for="town">City*</label>
+                                            <input  name="town" id="town" type="text" required placeholder="Town / City"
+                                                class="form-checkout__input input">
+                                        </div>
+                                        <div class="important-details__item">
+                                            <label class="form-checkout__label label" for="option">State*</label>
+                                            <select  name="option" id="option" required class="form-checkout__input input">
+                                                <option value disabled selected class="form-checkout__option">State</option>
+                                                <option value="Kyiv" class="form-checkout__option">Київ - Kyiv</option>
+                                                <option value="Dnipro" class="form-checkout__option">Дніпро - Dnipro</option>
+                                                <option value="Kherson" class="form-checkout__option">Херсон - Kherson</option>
+                                            </select>
+                                        </div>
+                                        <div class="important-details__item">
+                                            <label class="form-checkout__label label" for="postalCode">Postal Code*</label>
+                                            <input  name="postalCode" id="postalCode" type="number" required
+                                                placeholder="Postal Code" class="form-checkout__input input">
+                                        </div>
+                                    </div>
+                                    <div class="form-checkout__item-phone">
+                                        <label class="form-checkout__label label" for="mobile">Phone*</label>
+                                        <input  name="mobile" id="mobile" type="tel" required placeholder="Phone"
+                                            class="form-checkout__input input">
+                                    </div>
+                                    <div class="form-checkout__button">
+                                        <button form="form-checkout"  type="submit"
+                                            class="form-checkout__button-link">Continue to
+                                            delivery</button>
+                                    </div>
+                                    <div class="form-checkout__checkbox">
+                                        <input  type="checkbox" id="check-3" name="billing"
+                                            class="form-checkout__checkbox-input">
+                                        <label class="form-checkout__checkbox-label" for="check-3">Save my information for a faster
+                                            checkout</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>					
+				</section>
+            </main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

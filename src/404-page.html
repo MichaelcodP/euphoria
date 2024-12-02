@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Check Page"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+                <section class="page__error-page error-page">					
+					<div class="error-page__container">
+                        <div class="error-page__picture">
+                            <img class="error-page__image ibg" src="@img/404/error.jpg" alt="Error">
+                        </div>
+                        <h2 class="error-page__title">
+                            Oops! Page not found
+                        </h2>
+                        <div class="error-page__text">
+                            <p>
+                                The page you are looking for might have been removed or temporarily unavailable.
+                            </p>
+                        </div>
+                        <a href="index.html" class="error-page__btn button">Back to HomePage</a>
+					</div>
+				</section>
+            </main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

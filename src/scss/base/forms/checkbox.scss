@@ -1,0 +1,41 @@
+.checkbox {
+	position: relative;
+	display: flex;
+  	align-items: center;
+	&:not(:last-child) {
+		margin-bottom: toRem(5);
+	}
+	// .checkbox__input
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:focus-visible + .checkbox__label .checkbox__icon {
+			outline: 2px solid #6a0dad;
+		}
+		&:checked + .checkbox__label .checkbox__icon path {
+			fill: #6a0dad;
+		}
+	}
+	// .checkbox__label
+	&__label {
+		cursor: pointer;
+		display: inline-flex;
+		position: relative;
+
+		.checkbox__icon {
+			flex: 0 0 toRem(18); // Фиксированный размер SVG
+      		margin-right: toRem(18); // Расстояние между SVG и текстом
+		}
+		path {
+			fill: #3C4242; // Цвет SVG по умолчанию
+        	transition: fill 0.3s ease; // Плавный переход цвета
+		}
+	}
+	// .checkbox__text
+	&__text {
+		align-self: center;
+		color: #807D7E;
+	}
+}

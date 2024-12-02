@@ -1,0 +1,193 @@
+.checkout {
+
+    // .checkout__container
+
+    &__container {
+    }
+
+    // .checkout__header
+
+    &__header {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 52, 30);
+        }
+    }
+
+    // .checkout__breadcrumbs
+
+    &__breadcrumbs {
+       
+    }
+
+    // .checkout__content
+
+    &__content {
+    }
+
+    // .checkout__title
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+    }
+
+    // .checkout__subtitle
+
+    &__subtitle {
+        color: $darkColor;
+        @extend %CS;
+        font-size: toRem(22);
+        font-weight: 600;
+        line-height: 1.52; /* 152.273% */
+        letter-spacing: 0.44px;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 30);  
+        }        
+    }
+
+    // .checkout__form
+
+    &__form {
+    }
+}
+.form-checkout {
+
+    // .form-checkout__body
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: toRem(28);
+        column-gap: toRem(38);
+    }
+
+    // .form-checkout__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(10);
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 45%;
+        @include adaptiveValue("min-width", 382, 320);
+    }
+
+    // .form-checkout__label
+
+    &__label {
+        color: $darkColor;
+        font-weight: 600;
+        letter-spacing: 0.32px;
+    }
+
+    // .form-checkout__input
+
+    &__input {
+        padding: toRem(16) toRem(20);
+    }
+
+    // .form-checkout__important
+
+    &__important {
+    }
+
+    // .form-checkout__option
+
+    &__option {
+        font-size: toRem(14);
+    }
+
+    // .form-checkout__item-phone
+
+    &__item-phone {
+        display: flex;
+        flex: 0 1 toRem(382);
+        flex-direction: column;
+        gap: toRem(10);
+    }
+
+    // .form-checkout__button
+
+    &__button {
+        display: flex;
+	    flex: 0 0 100%;	
+    }
+
+    // .form-checkout__button-link
+
+    &__button-link {
+        padding: toRem(16) toRem(20);
+        border-radius: toRem(8);
+        background-color: $purplColor;
+        transition: background-color 0.3s;
+        color: #FFF;
+        font-weight: 500;
+        &:hover {
+            background-color: #4f2b7f;
+        }
+    }
+
+    // .form-checkout__checkbox
+
+    &__checkbox {
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: toRem(15);
+        }
+    }
+
+    // .form-checkout__checkbox-input
+
+    &__checkbox-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    .form-checkout__checkbox-input:focus-visible + .form-checkout__checkbox-label {
+        outline: 1px solid #000;
+    }
+    .form-checkout__checkbox-input:checked + .form-checkout__checkbox-label::before {
+        background-color: #807D7E;
+    }
+
+    // .form-checkout__checkbox-label
+
+    &__checkbox-label {
+        display: inline-flex;
+        gap: toRem(10);
+        cursor: pointer;
+
+        color: $darkColor;
+        font-size: toRem(20);
+        &::before {
+            content: "";
+            width: toRem(20);
+            height: toRem(20);
+            flex: 0 0 toRem(20);
+            transition: background-color 0.3s;
+            border: toRem(2) solid #BEBCBD;
+        }
+    }
+}   
+.important-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   /*  flex-wrap: wrap; */ /*	коли хочу цю команду вставити ломає верстку */
+	gap: toRem(35);
+	/* flex: 1 1 25%; */
+    // .important-details__item
+
+    &__item {
+        /* display: flex;
+        flex-direction: column;
+        row-gap: toRem(10);
+        width: 100%;
+        */
+    }
+}

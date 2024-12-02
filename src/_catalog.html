@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Catalog"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+                <div class="page__catalog catalog">
+                    <section class="catalog__main">
+						<div class="catalog__container">
+							<aside class="catalog__filter filter">
+								<h4 data-spoller="open" data-spoller-media="max,991.98" class="filter__title title-filter">
+									<button type="button" class="title-filter__button title-filter__button--main _icon-filter">Filter</button>
+								</h4>
+								<form action="#" class="filter__body">
+									<div class="filter__section section-filter">
+										<div class="section-filter__body">
+											<nav class="section-filter__menu menu-filter">
+												<ul class="menu-filter__list">
+													<li class="menu-filter__item">
+														<a href="#" class="menu-filter__link _icon-ch-right active">Tops</a>
+													</li>
+													<li class="menu-filter__item">
+														<a href="#" class="menu-filter__link _icon-ch-right">Printed T-shirts</a>
+													</li>
+													<li class="menu-filter__item">
+														<a href="#" class="menu-filter__link _icon-ch-right">Plain T-shirts</a>
+													</li>
+													<li class="menu-filter__item">
+														<a href="#" class="menu-filter__link _icon-ch-right">Kurti</a>
+													</li>
+													<li class="menu-filter__item">
+														<a href="#" class="menu-filter__link _icon-ch-right">Tops</a>
+													</li>
+													<li class="menu-filter__item">
+														<a href="#" class="menu-filter__link _icon-ch-right">Printed T-shirts</a>
+													</li>
+													<li class="menu-filter__item">
+														<a href="#" class="menu-filter__link _icon-ch-right">Plain T-shirts</a>
+													</li>
+													<li class="menu-filter__item">
+														<a href="#" class="menu-filter__link _icon-ch-right">Kurti</a>
+													</li>
+													<li class="menu-filter__item">
+														<a href="#" class="menu-filter__link _icon-ch-right">Printed T-shirts</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+									<div class="filter__section section-filter">
+										<h5 data-spoller="open" class="section-filter__title title-filter">
+											<button type="button" class="title-filter__button _icon-ch-down">Price</button>
+										</h5>
+										<div class="section-filter__body">
+											<div class="section-filter__price price-filter">
+												<div class="price-filter__range" id="range">
+													<div class="price-filter__inputs">
+														<input type="text" data-from name="price-from" class="price-filter__input price-filter__input--from">
+														<input type="text" data-to name="price-to" class="price-filter__input price-filter__input--to">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="filter__section section-filter">
+										<h5 data-spoller="open" class="section-filter__title title-filter">
+											<button type="button" class="title-filter__button _icon-ch-down">Colors</button>
+										</h5>
+										<div class="section-filter__body">
+											<div class="section-filter__colors colors-filter">
+												<label style="--color:#8434e1" class="colors-filter__item">
+													<input type="checkbox" name="color[]" class="colors-filter__input">
+													Purple
+												</label>
+												<label style="--color:#000000" class="colors-filter__item">
+													<input type="checkbox" name="color[]" class="colors-filter__input">
+													Black
+												</label>
+												<label style="--color:#F35528" class="colors-filter__item">
+													<input type="checkbox" name="color[]" class="colors-filter__input">
+													Red
+												</label>
+												<label style="--color:#F16F2B" class="colors-filter__item">
+													<input type="checkbox" name="color[]" class="colors-filter__input">
+													Orange
+												</label>
+												<label style="--color:#345EFF" class="colors-filter__item">
+													<input type="checkbox" name="color[]" class="colors-filter__input">
+													Navy
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter__section section-filter">
+										<h5 data-spoller="open" class="section-filter__title title-filter">
+											<button type="button" class="title-filter__button _icon-ch-down">Size</button>
+										</h5>
+										<div class="section-filter__body">
+											<div class="section-filter__size size-filter">
+												<label class="size-filter__item">
+													<input type="checkbox" name="size[]" class="size-filter__input">
+													XXS
+												</label>
+												<label class="size-filter__item">
+													<input type="checkbox" name="size[]" class="size-filter__input">
+													XS
+												</label>
+												<label class="size-filter__item">
+													<input type="checkbox" name="size[]" class="size-filter__input">
+													S
+												</label>
+												<label class="size-filter__item">
+													<input type="checkbox" name="size[]" class="size-filter__input">
+													m
+												</label>
+												<label class="size-filter__item">
+													<input type="checkbox" name="size[]" class="size-filter__input">
+													l
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter__section section-filter">
+										<h5 data-spoller="open" class="section-filter__title title-filter">
+											<button type="button" class="title-filter__button _icon-ch-down">Dress Style</button>
+										</h5>
+										<div class="section-filter__body">
+											<div class="section-filter__style style-filter">
+												<label class="style-filter__item _icon-ch-right">
+													<input type="checkbox" name="style[]" class="style-filter__input">
+													Classic
+												</label>
+												<label class="style-filter__item _icon-ch-right">
+													<input type="checkbox" name="style[]" class="style-filter__input">
+													Casual
+												</label>
+												<label class="style-filter__item _icon-ch-right">
+													<input type="checkbox" name="style[]" class="style-filter__input">
+													Business
+												</label>
+											</div>
+										</div>
+									</div>
+								</form>
+							</aside>
+							<div class="catalog__body">
+								<div class="catalog__header">
+									<h1 class="catalog__title">Women’s Clothing</h1>
+									<ul class="catalog__type type-catalog">
+										<li class="type-catalog__item">
+											<button class="type-catalog__button type-catalog__button--active">New</button>
+										</li>
+										<li class="type-catalog__item">
+											<button class="type-catalog__button">Recommended</button>
+										</li>
+									</ul>
+								</div>
+								<div class="catalog__items">
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="catalog__description description-catalog">
+						<div class="description-catalog__container">
+							<h2 class="description-catalog__title title">Clothing for Women Online in India</h2>
+							<div class="description-catalog__body">
+								<h3>Reexplore Women's Clothing Collection Online at Euphoria</h3>
+								<p>Women's Clothing – Are you <strong>searching</strong> for the best website to buy Clothing for Women online in India? Well, your search for the coolest and most stylish womens clothing ends here. From trendy Casual Womens Wear Online shopping to premium quality cotton women's apparel, Euphoria has closet of Women Collection covered with the latest and best designs of Women's Clothing Online.</p>
+								<p>Our collection of clothes for women will make you the trendsetter with an iconic resemblance of choice in Womens Wear. </p>
+								<h3>One-Stop Destination to Shop Every Clothing for Women: Euphoria</h3>
+								<p>Today, Clothing for Women is gaining more <strong>popularity</strong> above all. This is because gone are the days when women were used to carrying uncomfortable fashion. Today, a lady looks prettier when she is in Casual Womens Wear which is a comfortable outfit. Concerning this, Euphoria has a big fat range of Stylish Women's Clothing that would make her the winner wherever she goes.</p>
+								<p>Our collection of clothes for women will make you the trendsetter with an iconic resemblance of choice in Womens Wear. It is quite evident to say that there are very few Womens Clothing online stores where you can buy Western Wear for Women comprising the premium material and elegant design that you are always seeking for. Basically,</p>
+							</div>
+							<a href="#" class="description-catalog__see-more">See More</a>
+						</div>
+					</section>
+					<section class="catalog__best-price best-price">
+						<div class="best-price__container">
+							<h2 class="best-price__title title">Buy Women's Clothing at Best Price</h2>
+							<div class="best-price__table">
+								<table class="table-best-price">
+									<tr>
+										<th>Women's Clothing</th>
+										<th>Best Price</th>
+									</tr>
+									<tr>
+										<td>Pick Any 4- Womens Plain T-shirt Combo</td>
+										<td>₹1099</td>
+									</tr>
+									<tr>
+										<td>Pick Any 4- Plain Womens Boxer Combo</td>
+										<td>₹1099</td>
+									</tr>
+									<tr>
+										<td>Pick Any 4 - Women Plain Full Sleeve T-shirt Combo</td>
+										<td>₹1399</td>
+									</tr>
+									<tr>
+										<td>Multicolor Checkered Long Casual Shirts for Women</td>
+										<td>₹499</td>
+									</tr>
+									<tr>
+										<td>Pick Any 2: Plain Boxy Casual Shirts for Women Combo</td>
+										<td>₹799</td>
+									</tr>
+									<tr>
+										<td>Blue Floral Anarkali Kurti</td>
+										<td>₹599</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</section>
+                </div>
+            </main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
